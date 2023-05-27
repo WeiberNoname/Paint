@@ -15,6 +15,62 @@
 ##### Compile the file: `g++ example1.cpp -lX11 -o example1`,`g++ Paint.cpp -o Paint -lX11 -lopencv_core -lopencv_highgui -lopencv_imgcodecs`
 ##### Run the program:  `./example1` 
 
+> ## C++ static library for C++:
+* #### First create a file called "library.cpp".
+```
+//The library called library.h
+#include "library.h"
+int add(int a, int b) {
+    return a + b;
+}
+```
+* #### Second create a library header file called "library.h".
+```
+#ifndef LIBRARY_H
+#define LIBRARY_H
+int add(int a, int b);
+#endif
+```
+* #### Third compile the source file into an object file.
+```
+g++ -c library.cpp -o library.o
+```
+
+* #### Fourth create a static library called "liblibrary.a".
+```
+ar rcs liblibrary.a library.o
+```
+
+* #### Fifth create an example program to run the library.(`#include "library.h"`)
+```
+// example.cpp
+#include <iostream>
+#include "library.h"
+int main() {
+    int result = add(2, 3);
+    std::cout << "Result: " << result << std::endl;
+    return 0;
+}
+```
+
+* #### Sixth compile the program and against the static library.
+```
+g++ example.cpp -L. -llibrary -o example
+```
+
+#### Result:
+```
+Result: 5
+```
+
+
+> ## C++ dynamic library for C++:
+* #### First create a file called "library.cpp".
+```
+```
+
+
+![Screenshot 2023-05-27 192520](https://github.com/WeiberNoname/Paint/assets/129390032/3a0899b3-394a-47a3-a677-f1b0f618c78a)
 
 ### References:
 [Official Qt(software)](https://wiki.qt.io/Install_Qt_5_on_Ubuntu)
