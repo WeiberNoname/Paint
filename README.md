@@ -11,7 +11,8 @@
 ##### Exception : Additional step :`export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/qt5/lib`
 
 * ### X11 server display
-##### Compile the file: `g++ example1.cpp -lX11 -o example1`
+##### Find out required libraries: `pkg-config --libs opencv x11`
+##### Compile the file: `g++ example1.cpp -lX11 -o example1`,`g++ Paint.cpp -o Paint -lX11 -lopencv_core -lopencv_highgui -lopencv_imgcodecs`
 ##### Run the program:  `./example1` 
 
 
