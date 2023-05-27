@@ -124,4 +124,5 @@ g++ main.cpp -ldl -o myprogram
 [Qt for Linux/X11](https://doc.qt.io/qt-6/linux.html)
 
 [Qt (software)Wikipedia](https://en.wikipedia.org/wiki/Qt_(software))
+
 [ORACLE](https://docs.oracle.com/cd/E26505_01/html/E26506/glmqp.html)
