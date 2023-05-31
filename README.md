@@ -64,12 +64,7 @@ Result: 5
 ```
 
 
-> ## C++ dynamic library for C++:
-* #### First create a file called "library.cpp".
-```
-```
 ![Screenshot 2023-05-27 192520](https://github.com/WeiberNoname/Paint/assets/129390032/3a0899b3-394a-47a3-a677-f1b0f618c78a)
-
 
 
 > ## C++ dynamic library for C++:
